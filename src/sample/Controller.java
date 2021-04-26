@@ -138,8 +138,7 @@ public class Controller implements Initializable{
         String classArrays[][] = new String[][]{};
         String selectedState = state.toLowerCase();
         String query = "SELECT * FROM " + selectedState;
-        //String url = "jdbc:sqlite:/Users/EllieMitchell/clickulumTest/" + selectedState + ".sl3";
-        String url = "jdbc:sqlite:/Users/EllieMitchell/Desktop/clickulumJavaFX/reqs.sqlite";
+        String url = "jdbc:sqlite:reqs.sqlite";
         Connection connection = null;
         ResultSet resultSet = null;
         Statement statement = null;
@@ -216,6 +215,7 @@ public class Controller implements Initializable{
                     if(classArray[i][x].length() > 48){
                         tip.setWrapText(true);
                         tip.setMaxWidth(200);
+                        tip.setStyle("-fx-text-fill: #ffffff; -fx-font-size: 1em");
                         tip.setShowDelay(Duration.millis(0));
                         subject.setTooltip(tip);
                         subject.setTextAlignment(TextAlignment.CENTER);
