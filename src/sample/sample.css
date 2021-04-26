@@ -1,0 +1,194 @@
+@font-face {
+    src: url('Abel-Regular.ttf');
+}
+@font-face {
+   src: url('Oswald-Regular.ttf');
+}
+@font-face {
+    src: url('Sarala-Regular.ttf');
+}
+
+.root {
+    -fx-font-size: 14px;
+    -fx-background-color: linear-gradient(to bottom, #003249, #000E14);
+}
+
+#stateSelectCombo{
+    -fx-background-color: #F7CB15;
+    -fx-font-family: 'Abel';
+    -fx-font-size: 1.4em;
+}
+
+#stateSelectCombo .list-cell{
+    -fx-text-fill: #212630;
+    -fx-background-color: #E4F1EB;
+}
+
+#stateSelectCombo .scroll-bar:vertical {
+    -fx-background-color: #C9BAC8;
+    -fx-progress-color: #171A21;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 0.0 10.0 0.0;
+}
+
+#stateSelectCombo .scroll-bar:vertical .thumb {
+    -fx-background-color : #003249;
+    -fx-border-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-border-radius :4em;
+}
+
+#stateSelectCombo .list-view .list-cell:filled:hover {
+    -fx-text-fill: #007DB8;
+}
+
+#grid{
+    -fx-background-color: #F0F7F4;
+    -fx-max-width: 1300px;
+    -fx-max-height: 400px;
+    -fx-padding: 10px;
+    -fx-border-color: #F7CB15;
+    -fx-font-size: 1.2em;
+    -fx-font-family: 'Abel';
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+
+#grid Label {
+    -fx-pref-height:70px;
+    -fx-wrap-text: true;
+    -fx-padding-left: 5px;
+    -fx-padding-right: 5px;
+    -fx-text-fill: #171A21;
+}
+
+
+#grade9Row, #grade10Row, #grade11Row, #grade12Row, #englishCol, #mathCol, #scienceCol, #socStudCol, #addon1Col, #addon2Col, #addon3Col{
+    -fx-text-fill: #171A21;
+    -fx-font-family: 'Oswald';
+}
+
+HBox Button, HBox ComboBox{
+    -fx-font-family: 'Abel';
+    -fx-font-size:1.4em;
+    -fx-row-valignment: center;
+}
+
+#grid ComboBox {
+    -fx-background-color:#95C6B1;
+    -fx-text-fill: #F0F7F4;
+}
+
+#grid ComboBox .list-cell{
+    -fx-text-fill: #F0F7F4;
+    -fx-background-color:#003249;
+}
+
+#grid ComboBox .list-view .list-cell:filled:hover {
+ -fx-text-fill: #F7CB15;
+}
+
+HBox Button{
+    -fx-background-color: #C9BAC8;
+    -fx-text-fill: #171A21;
+}
+HBox Button:hover{
+    -fx-text-fill: #4B556C;
+}
+
+#resourceHeader {
+    -fx-text-fill:#F7CB15;
+    -fx-text-alignment: center;
+    -fx-font-size: 2.4em;
+    -fx-font-family: 'Oswald';
+    -fx-padding: 15px;
+}
+
+#resourceBox{
+    -fx-pref-width: 500px;
+    -fx-background-color: #212630;
+    -fx-pref-height: 300px;
+    -fx-text-alignment: left;
+}
+
+#resourcesBox {
+    -fx-padding: 50px;
+}
+#resourceArea1, #resourceArea2, #resourceArea3 {
+    -fx-border-color: #F7CB15;
+    -fx-text-fill: #F0F7F4;
+}
+#headerLabel{
+    -fx-font-family: 'Abel';
+    -fx-font-size: 4em;
+    -fx-text-fill: #F0F7F4;
+}
+
+#tip{
+    -fx-font-family: 'Abel';
+    -fx-font-size:1.2em;
+}
+
+#resourceBox Button{
+    -fx-border-color: #90a955;
+    -fx-border-radius:3px;
+}
+#resourcesGrid{
+    -fx-background-color: #001C29;
+    -fx-vertical-grid-lines-visible: true;
+    -fx-font-family: 'Abel';
+    -fx-text-fill: #F0F7F4;
+    -fx-border-style: hidden;
+}
+
+#resourcesGrid Line{
+    -fx-stroke: #2A2F3C;
+}
+
+.hyperlink{
+    -fx-text-fill: #E4F1EB;
+    -fx-font-size:1.3em;
+    -fx-wrap-text: true;
+}
+
+.hyperlink :hover{
+    -fx-text-fill: #F7CB15;
+}
+
+#resourcesGrid Text {
+    -fx-text-fill: #E4F1EB;
+}
+#englishLabel, #mathLabel, #scienceLabel, #socStudLabel{
+    -fx-font-family: 'Oswald';
+    -fx-text-fill: #F0F7F4;
+    -fx-font-size: 1.7em;
+}
+
+#mathBox, #englishBox, #scienceBox, #socStudBox{
+    -fx-font-family: 'Abel';
+    -fx-font-size:1.3em;
+    -fx-padding: 3px;
+    -fx-text-fill: #C9BAC8;
+}
+
+.scroll-bar:vertical {
+    -fx-background-color :#F0F7F4;
+    -fx-progress-color: #003249;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 0.0 10.0 0.0;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color : #F7CB15;
+    -fx-border-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-border-radius :4em;
+}
+
+ScrollPane {
+    -fx-border-style: hidden;
+}
+
+#resourcesGrid Label{
+    -fx-text-fill: #ffffff;
+}

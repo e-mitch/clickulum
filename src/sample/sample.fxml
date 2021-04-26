@@ -1,0 +1,172 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.control.TextArea?>
+
+<?import javafx.scene.control.ScrollPane?>
+<BorderPane
+        fx:controller="sample.Controller"
+        stylesheets="/sample/sample.css"
+        xmlns:fx="http://javafx.com/fxml"
+        prefWidth="1400"
+        prefHeight="1200">
+    <top>
+        <!--
+
+        -->
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="20" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="20" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="40" />
+
+            </columnConstraints>
+
+            <ComboBox fx:id="stateSelectCombo" promptText="Select State" GridPane.columnIndex="0"/>
+            <padding>
+                <Insets left="20" top="15"/>
+            </padding>
+            <HBox spacing="20" fx:id="topMenu" prefWidth="400" alignment="TOP_RIGHT" GridPane.columnIndex="4">
+                <padding>
+                    <Insets top="15" right="10" left="10"/>
+                </padding>
+                <Button fx:id="openButton" text="Open Curriculum" onAction="#openData"/>
+                <Button fx:id="newButton" text="New Curriculum"/>
+                <Button fx:id="saveButton" text="Save Curriculum" onAction="#exportData"/>
+            </HBox>
+        </GridPane>
+    </top>
+    <center>
+        <GridPane fx:id="grid">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10"   />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="12.5" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="12.5" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="12.5" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="12.5" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="12.5" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="12.5" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="12.5" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="-Infinity" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="-Infinity" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="-Infinity" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="-Infinity" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="-Infinity" valignment="CENTER" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <Label id="gradeHead" text=""
+                  GridPane.columnIndex="0" GridPane.rowIndex="0"
+                  GridPane.columnSpan="1" />
+            <Label id="grade9Row" text="9th Grade"
+                  GridPane.columnIndex="0" GridPane.rowIndex="1"
+                  GridPane.columnSpan="1" style="-fx-font-size: 1.3em"
+                  GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+            <Label id="grade10Row" text="10th Grade"
+                  GridPane.columnIndex="0" GridPane.rowIndex="2"
+                  GridPane.columnSpan="1" style="-fx-font-size:1.3em"
+                  GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+            <Label id="grade11Row" text="11th Grade"
+                  GridPane.columnIndex="0" GridPane.rowIndex="3"
+                  GridPane.columnSpan="1" style="-fx-font-size: 1.3em"
+                  GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+            <Label id="grade12Row" text="12th Grade"
+                  GridPane.columnIndex="0" GridPane.rowIndex="4"
+                  GridPane.columnSpan="1" style="-fx-font-size: 1.3em"
+                  GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+            <Label id="englishCol" text="English"
+                  GridPane.columnIndex="1" GridPane.rowIndex="0"
+                  GridPane.columnSpan="1" style="-fx-font-size: 1.3em"
+                  GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+            <Label id="mathCol" text="Mathematics"
+                  GridPane.columnIndex="2" GridPane.rowIndex="0"
+                  GridPane.columnSpan="1" style="-fx-font-size: 1.3em"
+                  GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+            <Label id="scienceCol" text="Science"
+                  GridPane.columnIndex="3" GridPane.rowIndex="0"
+                  GridPane.columnSpan="1" style="-fx-font-size: 1.3em"
+                  GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+            <Label id="socStudCol" text="Social Studies"
+                  GridPane.columnIndex="4" GridPane.rowIndex="0"
+                  GridPane.columnSpan="1" style="-fx-font-size: 1.3em"
+                  GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+            <Label id="addon1Col" text="Electives"
+                  GridPane.columnIndex="5" GridPane.rowIndex="0"
+                  GridPane.columnSpan="1" style="-fx-font-size: 1.3em"
+                  GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+            <Label id="addon2Col" text="Electives"
+                  GridPane.columnIndex="6" GridPane.rowIndex="0"
+                  GridPane.columnSpan="1" style="-fx-font-size: 1.3em"
+                  GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+            <Label id="addon3Col" text="Electives"
+                   GridPane.columnIndex="7" GridPane.rowIndex="0"
+                   GridPane.columnSpan="1" style="-fx-font-size: 1.3em"
+                   GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+        </GridPane>
+    </center>
+    <bottom>
+        <ScrollPane fx:id = "resourceScroll" hbarPolicy="NEVER" vbarPolicy="ALWAYS" minHeight="300" maxHeight="300" minWidth="1400">
+        <GridPane fx:id="resourcesGrid" minHeight="300">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="NEVER" prefWidth="345"/>
+                        <ColumnConstraints hgrow="NEVER" prefWidth="345"/>
+                        <ColumnConstraints hgrow="NEVER" prefWidth="345"/>
+                        <ColumnConstraints hgrow="NEVER" prefWidth="345"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="-Infinity" maxHeight = "60" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="-Infinity" maxHeight = "40" valignment="TOP" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="-Infinity" maxHeight = "40" valignment="TOP" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="-Infinity" valignment="TOP" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="-Infinity" valignment="TOP" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="-Infinity" valignment="TOP" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <Label fx:id="resourceHeader" text="Recommended Resources" GridPane.rowIndex = "0" GridPane.columnIndex="0" GridPane.vgrow="NEVER"/>
+                    <HBox fx:id= "resourcesBox" GridPane.rowIndex="0" GridPane.columnIndex="1" spacing="5" GridPane.columnSpan="2" GridPane.vgrow = "NEVER">
+                        <Button fx:id="grade9Label" text="9th Grade" onAction="#get9Resources"/>
+                        <Button fx:id="grade10Label" text="10th Grade" onAction="#get10Resources"/>
+                        <Button fx:id="grade11Label" text="11th Grade" onAction="#get11Resources"/>
+                        <Button fx:id="grade12Label" text="12th Grade" onAction="#get12Resources"/>
+                    </HBox>
+                    <Label fx:id="englishLabel" text="English" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+                    <Label fx:id="mathLabel" text="Math" GridPane.rowIndex="2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+                    <Label fx:id="scienceLabel" text="Science" GridPane.rowIndex="2" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+                    <Label fx:id="socStudLabel" text="Social Studies" GridPane.rowIndex="2" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+                    <VBox fx:id="englishBox" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.rowSpan="3">
+                        <children>
+
+                        </children>
+                    </VBox>
+                    <VBox fx:id="mathBox" GridPane.columnIndex = "1" GridPane.rowIndex = "3" GridPane.rowSpan = "3">
+                        <children>
+
+                        </children>
+                    </VBox>
+                    <VBox fx:id="scienceBox"  GridPane.columnIndex = "2" GridPane.rowIndex = "3" GridPane.rowSpan = "3">
+                        <children>
+
+                        </children>
+                    </VBox><VBox fx:id="socStudBox"  GridPane.columnIndex = "3" GridPane.rowIndex = "3" GridPane.rowSpan = "3">
+                    <children>
+
+                    </children>
+                </VBox>
+
+        </GridPane>
+        </ScrollPane>
+    </bottom>
+</BorderPane>
+
+

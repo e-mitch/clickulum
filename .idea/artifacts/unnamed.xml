@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="unnamed">
+    <output-path>$PROJECT_DIR$/out/artifacts/unnamed</output-path>
+    <root id="root">
+      <element id="artifact" artifact-name="JavaFXApp" />
+      <element id="file-copy" path="$PROJECT_DIR$/sqlite-jdbc-3.7.2.jar" />
+    </root>
+  </artifact>
+</component>
